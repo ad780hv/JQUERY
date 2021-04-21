@@ -1,0 +1,82 @@
+<!-- file: P11-2-xml.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AJAX dan XML</title>
+    <script type="text/javascript">
+    function bukaDokumen(url)
+    {
+        var xmlhttp;
+        var teks, x, xx, i;
+        if (window.XMLHttpRequest)
+        {   // jika menggunakan IE7+, Firexof, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        }
+        else
+        {   // jika menggunakan IE6, IE5
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange  = function()
+        {
+            if (xmlhttp.readyState==4 && xmlhttp.status==200)
+            {
+                teks = "<table><tr><th>Judul</th><th>Aritis</th>";
+                teks = teks + "<th>Tahun</th></tr>";
+                x = xmlhttp.responseXML.documentElement.getElementByTagName("cd");
+                for (i=0; i<x.length; i++)
+                {
+                    teks = teks + "<tr>";
+                    xx = x[i].getElementByTagName("judul"); // data judul
+                    {
+                        try
+                        {
+                            teks = teks + "<td>" + xx[0].firstChild.nodeValue + "</td>";
+                        }
+                        catch (er)
+                        {
+                            teks = teks + "<td> </td>";
+                        }
+                    }
+                    xx = x[i].getElementByTagName("artis"); // data artis
+                    {
+                        try
+                        {
+                            teks = teks + "<td>" + xx[0].firstChild.nodeValue + "</td>";
+                        }
+                        catch (er)
+                        {
+                            teks = teks + "<td> </td>";
+                        }
+                    }
+                    xx = x[i].getElementByTagName("tahun"); // data tahun
+                    {
+                        try
+                        {
+                            teks = teks + "<td>" + xx[0].firstChild.nodeValue + "</td>";
+                        }
+                        catch (er)
+                        {
+                            teks = teks + "<td> </td>";
+                        }
+                    }
+                teks = teks + "</tr>";
+            }
+            teks = teks + "</table>";
+            document.getElementById('teksCDInfo').innerHTML = teks;
+            }
+            }
+            xmlhttp.open("GET",url,true);
+            xmlhttp.send();
+    }
+    </script>
+    <style type="text/css">
+    tbody td { padding: 10px; }
+    tbody tr:nth-child(odd) { background-color: #AAAAAA; }
+    tbody tr:nth-child(even) { background-color: #DDDDDD; }
+    </style>
+</head>
+<body>
+    <button onclick="bukaDokumen('P11-cd.xml')">Informasi Album Musik</button>
+    <div id="teksCDInfo"></div>
+</body>
+</html>

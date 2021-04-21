@@ -1,0 +1,34 @@
+<!-- file: P11-ajax.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ajax</title>
+    <script type="text/javascript">
+    function bukaDokumen()
+    {
+        var xmlhttp;
+        if (window.XMLHttpRequest)
+        {   // jika menggunakan IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        }
+        else
+        {   // jika menggunakan IE6, IE5
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange  = function()
+        {
+            if (xmlhttp.readyState==4 && xmlhttp.status==200)
+            {
+                document.getElementById("tulisan").innerHTML = xmlhttp.responseText;
+            }   
+        }
+        xmlhttp.open("GET","P11-isi-ajax.html",true);
+        xmlhttp.send();
+    }
+    </script>
+</head>
+<body>
+    <div id="tulisan"><h2>Demo Penggunaan AJAX</h2></div>
+    <button onclick="bukaDokumen()">Ubah Tulisan Ini</button>
+</body>
+</html>

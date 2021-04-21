@@ -1,0 +1,27 @@
+<?xml version="1.0" encording="ISO-8859-1"?>
+<katalog>
+    <cd>
+        <judul>Overexposed</judul>
+        <artis>Maroon 5</artis>
+        <negara>AS</negara>
+        <produsen>Octone Records</produsen>
+        <harga>45000</harga>
+        <tahun>2012</tahun>
+    </cd>
+    <cd>
+        <judul>25</judul>
+        <artis>Adele</artis>
+        <negara>Inggris</negara>
+        <produsen>Columbia</produsen>
+        <harga>50000</harga>
+        <tahun>2015</tahun>
+    </cd>
+    <cd>
+        <judul>One More Light</judul>
+        <artis>Linkin Park</artis>
+        <negara>AS</negara>
+        <produsen>Warner Bros</produsen>
+        <harga>50000</harga>
+        <tahun>2017</tahun>
+    </cd>
+</katalog>
