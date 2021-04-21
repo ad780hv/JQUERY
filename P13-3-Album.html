@@ -1,0 +1,164 @@
+<!-- file: P13-3-Album.html -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content= width=device-width, initial-scale, shrink-to-fit=no">
+        <title>P13-3: Contoh Penggunaan Grid Album</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <script scr="js/jquery-3.3.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/holder.min.js"></script>
+            <style type="text/css">
+                :root {
+                    --jumbotron-padding-y: 3rem; }
+                .jumbotron {
+                    padding-top: var(--jumbotron-padding-y);
+                    padding-bottom: var(--jumbotron-padding-y);
+                    margin-bottom: 0;
+                    background-color: #fff; }
+                @media (min-width: 768px ) {
+                    .jumbotron {
+                        padding-top: calc(var(--jumbotron-padding-y) * 2);
+                        padding-bottom: calc(var(--jumbotron-padding-y) * 2); }
+                }
+                .jumbotron p:last-child {
+                    margin-bottom: 0; }
+                .jumbotron-heading {
+                    font-weight: 300;   }
+                .jumbotron .container {
+                    max-width: 40rem;   }
+                footer {
+                    padding-top: 3rem;
+                    padding-bottom: 3rem; }
+                footer p {
+                    margin-bottom: .25rem;  }
+            </style>
+    </head>
+
+    <body>
+        <header>
+            <div class="collapse bg-dark" id="navbarHeader">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8 col-md-7 py-4">
+                        <h4 class="text-white">Album Foto Mahasiswa SI-TI</h4>
+                        <p class="text-muted">Keterangan mengenai album bisa dituliskan disini</p>
+                    </div>
+                    <div class="col-sm-4 offset-md-1 py-4">
+                        <h4 class="text-white">Kontak</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="https://www.instagram.com/fttiunjaya"
+                            class="text-white">Instagram</a</li>
+                            <li><a href="https://www.facebook.com/fttiunjaya"
+                            class="text-white">Facebook</a></li>
+                            <li><a href="mailto:ftti@unjaya.ac.id" class="text-white">E-mail</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div> 
+            </div>
+            <div class="navabar navbar-dark bg-dark shadow-sm">
+                <div class="container d-flex justify-content-between">
+                    <a href="#" class="navbar-brand d-flex align-items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-
+                    width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="mr-2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0
+                    0 1 2-2h412-3h612 3h4a2 2 0 0 1 2 2z"></path><circle cx="12"
+                    cy="13" r="4"></circle>
+                    </svg> 
+                    <strong>Album Foto</strong>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-
+                    toggle="collapse" data-target="#navbarHeader" aria-
+                    controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <main role="main">
+            <section class="jumbotron text-center">
+                <div class="container">
+                    <h1 class="jumbotron-heading">Contoh Album</h1>
+                    <p class="lead text-muted">Contoh keterangan dapat ditulis disini,
+                    misalnya keterangan tentang perjalanan yang tertera dalam album di bawah.
+                    </p>
+                    <p>
+                        <a href="https://www.instagram.com/fttiunjaya" class="btn btn-primary my-2">Lihat Instagram</a>
+                        <a href="mailto:ffti@unjaya.ac.id" class="btn btn-secondary my-2">Kirim E-mail</a>
+                    </p>
+                </div>
+            </section>
+            <div class="album py-5 bg-light">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm">
+                                <img class="card-img-top" src="default.png" alt="Card image cap">
+                                <div class="card-body">
+                                    <p class="card-text">Mahasiswa ini bernama Adhi Bagus Cahyanto.
+                                        Dia berasal dari Kota Metro Lampung. Membaca adalah hobi kesehariannya.
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-grup">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">IG</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">WA</button>
+                                        </div>
+                                        <small class="text-muted">S-1 Informatika</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm">
+                                <img class="card-img-top" src="default.png" alt="Card image cap">
+                                <div class="card-body">
+                                    <p class="card-text">Mahasiswa ini bernama Adhi
+                                        Bagus Cahyanto. Dia berasal dari Kota Metro Lampung. Membaca adalah
+                                        hobi kesehariannya.
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-grup">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">IG</button>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">WA</button>
+                                        </div>
+                                        <small class="text-muted">S-1 Teknologi Informasi</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm">
+                                <img class="card-img-top" src="default.png" alt="Card image cap">
+                                <div class="card-body">
+                                    <p class="card-text">Mahasiswa ini bernama Andi 
+                                        Bagus Cahyanto. Dia berasal dari kota Metro Lampung. Membaca adalah
+                                        hobi kesehariannya..
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-grup">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">IG</button>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">WA</button>
+                                        </div>
+                                        <small class="text-muted">S-1 Sistem Informasi</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="text-muted">
+            <div class="container">
+                <p class="float-right">
+                    <a href="#">Kembali ke atas</a>
+                </p>
+                <p>Copyright & copy; Chanief Budi S. 2019</p>
+                <p>Silakan kunjungi juga <a href="http://ftti.unjaya.ac.id">Website resmi 
+                kampus</a> atau <a href="http://pmb.unjaya.ac.id">Penerimaan Mahasiswa baru</a></p>
+            </div>
+        </footer>
+    </body>
+</html>
