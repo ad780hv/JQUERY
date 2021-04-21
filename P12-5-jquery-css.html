@@ -1,0 +1,43 @@
+<!-- file: P12-5-jquery-css.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>P12-5: jquery Manipulasi CSS</title>
+    <script scr="jquery-3.3.1.min.js"></script>
+    <script>
+        $("document").ready(function(){
+            $("div").mouseover(function(){
+                $(this).css( {background:"red"} );
+            });
+            $("div").mouseleave(function(){
+                $(this).css( {background:"yellow"} );
+            });
+            $("div#ubahukuran").dblclick(function(){
+                $(this).css( {width: "100px", height:"100px"} );
+            });
+        });
+    </script>
+    <style type="text/css">
+        div {
+            background: yellow;
+            width: 60px;
+            height: 60px;
+            float: left;
+            margin: 15px;
+            cursor: pointer;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>jquery Modifikasi CSS</h2>
+    <P>Kotak pertama dan kedua merupakan sebuah class Div.<br>
+    Kotak ketiga mempunyai id <stron>ubahwarna</stron> dari kotak keempat mempunyai id <strong>ubahukuran</strong>.<br>
+    klik 2x pada kotak ketiga & keempat untuk melihat perubahannya.
+    </P>
+    <div>1</div>
+    <div>2</div>
+    <div id="ubahwarna">3</div>
+    <div id="ubahukuran">4</div>
+</body>
+</html>

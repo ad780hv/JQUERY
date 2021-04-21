@@ -1,0 +1,29 @@
+<!-- file: P12-1-Penambahan.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>P12-1: jquery Modifikasi HTML</title>
+    <script scr="jquery-3.3.1.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("#tombol1").click(function(){
+            $("p").append("<br><strong>Teks ini ditambahkan via jquery</strong>.");
+        });
+        $("#tombol2").click(function(){
+            $("ol").append("<li>Poin ini ditambahkan via jquery</li>");
+        });
+    });
+    </script>
+</head>
+<body>
+    <h2>Ujicoba jquery Modifikasi HTML.</h2>
+    <p>Teks ini ditulis dengan kode HTML biasa.</p>
+    <ol>
+        <li>Poin 1</li>
+        <li>Poin 2</li>
+        <li>Poin 3</li>
+    </ol>
+    <button id="tombol1">Tambah teks</button>
+    <button id="tombol2">Tambah poin</button>
+</body>
+</html>

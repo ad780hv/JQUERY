@@ -1,0 +1,30 @@
+<!-- file: P12-3-Penggantian.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>P12-3: Modifikasi HTML</title>
+    <script scr="jquery-3.3.1.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("#tombol1").click(function(){
+            $("#tulisan1").text("Tulisan ini sebagai pengganti");
+        });
+        $("#tombol2").click(function(){
+            $("#tulisan2").html("<strong>jquery dan AJAX</strong>");
+        });
+        $("#tombol3").click(function(){
+            $("#tulisan").val("Upin Ipin");
+        });
+    });
+    </script>
+</head>
+<body>
+    <h2>Ujicoba jquery Modifikasi Komponen HTML.</h2>
+    <P id="tulisan1">Ujicoba jquery 1. Bagian ini akan digantikan tulisan biasa</P>
+    <p id="tulisan2">Ujicoba jquery 2. Bagian ini akan digantikan tulisan berformat HTML.</p>
+    <p>Judul Film<input type="text" id="tulisan3" value="Boboboy"></p>
+    <button id="tombol1">Ubah Teks</button>
+    <button id="tombol2">Ubah HTML</button>
+    <button id="tombol3">Ubah Field</button>
+</body>
+</html>

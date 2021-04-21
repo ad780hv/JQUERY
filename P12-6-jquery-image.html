@@ -1,0 +1,61 @@
+<!-- file: P12-6-jquery-image..html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>P12-6: jquery Manipulasi Image</title>
+    <style type="text/css">
+    body {
+        font-family:Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        background: url(back.jpg) repeat-x;
+        text-align: center;
+    }
+    #wrapper {
+        width: 800px;
+        height: 400px;
+        background: #8B7E5A;
+        border: solid 1px yellow;
+        margin: 4em auto;
+        border-radius: 10px;
+    }
+    button {
+        margin: 3em 0 0 0;
+        padding: 10px;
+        background-color: black;
+        border: solid 1px yellow;
+        color: yellow;
+        border-radius: 5px;
+    }
+    #images {
+        padding: 15px 2px 2px 2px;
+    }
+    </style>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("#tombol1").click(function(){
+            $("#chelsea").slideToggle(1000);
+        });
+        $("#tombol2").click(function(){
+            $("#real").slideToggle(1000);
+        });
+        $("#tombol3").click(function(){
+            $("#juve").slideToggle(1000);
+        });
+    });
+    </script>
+</head>
+<body>
+    <div id="wrapper">
+        <h2>jquery Manipulasi Image</h2>
+        <button id="tombol1">Chelsea</button>
+        <button id="tombol1">Real Madrid</button>
+        <button id="tombol1">Juventus</button>
+        <div id="images">
+            <img src="chelsea.jpg" id="chelsea">
+            <img src="real.jpg" id="real">
+            <img src="juve.jpg" id="juve">
+        </div>
+    </div>
+</body>
+</html>

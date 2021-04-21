@@ -1,0 +1,21 @@
+<!-- file: P12-4-AJAX.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>P12-4: Load AJAX</title>
+    <script scr="jquery-3.3.1.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("#tombol").click(function(){
+            $("#ajax").load("P12-ajax.html");
+        });
+    });
+    </script>
+</head>
+<body>
+    <div id="ajax">
+        <h2>jquery AJAX</h2>
+    </div>
+    <button id="tombol">Ubah isi Tulisan</button>
+</body>
+</html>
